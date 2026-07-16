@@ -4,7 +4,9 @@
 [![GitHub](https://img.shields.io/github/stars/benchflow-ai/FrontierPhysics?style=social)](https://github.com/benchflow-ai/FrontierPhysics)
 [![WeChat](https://img.shields.io/badge/WeChat-Join-07C160?logo=wechat&logoColor=white)](docs/wechat-qr.jpg)
 
-Benchmarking AI agents on advanced physics research.
+Are AI agents good physicists?
+
+**FrontierPhysics**: Benchmark how AI agents do frontier physics research.
 
 **[Contributing](CONTRIBUTING.md)** · **[Benchmark Protocol](docs/benchmark-protocol.md)** · **[BenchFlow SDK](https://github.com/benchflow-ai/benchflow)** · **[Discord](https://discord.gg/G9dg3EfSva)**
 
