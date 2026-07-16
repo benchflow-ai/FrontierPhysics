@@ -24,10 +24,11 @@ metadata:
   - mathematical-method
   - library-api-usage
   tags:
-  - physics
+  - atomic-molecular-and-optical-physics
   - trapped-ions
   - trap-simulation
   - shuttling-simulation
+  - inverse-engineering
 verifier:
   type: test-script
   timeout_sec: 900.0
