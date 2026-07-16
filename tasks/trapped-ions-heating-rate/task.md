@@ -4,20 +4,23 @@ metadata:
   author_name: Bingran You
   author_email: bingran.you@berkeley.edu
   difficulty: medium
-  category: atomic-molecular-and-optical-physics
+  category: natural-science
   subcategory: trapped-ions
   category_confidence: high
   task_type:
-  - experiment
-  - data-processing
+  - analysis
+  - calculation
   modality:
   - scientific-data
-  - h5
+  - time-series
   interface:
   - terminal
   - python
   skill_type:
-  - -
+  - domain-procedure
+  - mathematical-method
+  - library-api-usage
+  - data-cleaning-procedure
   tags:
   - experiment
   - atomic-molecular-and-optical-physics
@@ -44,6 +47,8 @@ environment:
 ---
 
 In the experiment we shot 729 nm beam to drive the transition from S to D state of 40Ca+ ions chain (9 ions chain in a linear paul trap). The trap is a marco 3D trap and 9 ions are lined up along the axial direction. We can assume the trap potential is a 3D-harmonic-oscillator.
+
+For the COM-mode carrier model, use the measured axial secular frequency of 0.177 MHz.
 
 For the gaussian-beam along axial direction, the intensity distribution is modelled by this array [0.96912696, 0.9844114, 0.99344862, 0.99840835, 1., 0.99840835, 0.99344862, 0.9844114, 0.96912696]. Given the rabi flop experimental data in the env (florescence collected from 9 ions in total):
 

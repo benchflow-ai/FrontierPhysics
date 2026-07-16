@@ -4,11 +4,11 @@ metadata:
   author_name: Bingran You
   author_email: bingran.you@berkeley.edu
   difficulty: hard
-  category: atomic-molecular-and-optical-physics
+  category: natural-science
   subcategory: trapped-ions
   category_confidence: high
   task_type:
-  - experiment
+  - calculation
   - simulation
   - optimization
   modality:
