@@ -4,8 +4,8 @@ metadata:
   author_name: Bingran You
   author_email: bingran.you@berkeley.edu
   difficulty: hard
-  category: natural-science
-  subcategory: ion-trap-shuttling
+  category: atomic-molecular-and-optical-physics
+  subcategory: trapped-ions
   category_confidence: high
   task_type:
   - simulation
