@@ -9,10 +9,11 @@ verifier, or unusable mentor skill is not.
 ### 1. Repository and structure
 
 ```bash
-python3 .github/scripts/validate_repository.py
-python3 .github/scripts/validate_tasks.py tasks
-python3 .github/scripts/lint_taxonomy.py
-python3 .github/scripts/lint_skill_frontmatter.py
+uv run python .github/scripts/validate_repository.py
+uv run python .github/scripts/validate_tasks.py tasks
+uv run python .github/scripts/lint_taxonomy.py
+uv run python .github/scripts/lint_skill_frontmatter.py
+uv run python .github/scripts/lint_frontierphysics_docs.py
 bench tasks check tasks/<task-id>
 ```
 
@@ -79,5 +80,5 @@ For every agent run:
 ## Reporting
 
 Lead with no-skill pass rate. Show the with-skill rate in a separate
-“solvability control” column and never combine the two into one leaderboard
+“solvability control” column and never combine the two into one benchmark
 score.

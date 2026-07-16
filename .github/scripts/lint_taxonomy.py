@@ -5,8 +5,8 @@ Taxonomy metadata lives under `metadata` in the YAML frontmatter of each
 native `task.md` package. The default run checks `tasks/`.
 
 Usage (matches .github/workflows/lint-taxonomy.yml, which installs PyYAML):
-    python3 .github/scripts/lint_taxonomy.py
-    python3 .github/scripts/lint_taxonomy.py tasks/foo/task.md ...
+    uv run python .github/scripts/lint_taxonomy.py
+    uv run python .github/scripts/lint_taxonomy.py tasks/foo/task.md ...
 
 Exits 1 on any error. Warnings are printed but do not fail the run.
 """

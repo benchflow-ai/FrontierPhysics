@@ -34,9 +34,16 @@ The values are enforced by [taxonomy.yaml](taxonomy.yaml).
 ### `category`
 
 The primary scientific or technical discipline needed to solve the task.
-FrontierPhysics currently uses `natural-science` for physics research tasks.
-The broader controlled vocabulary is retained for hybrid physical-systems,
-mathematical, software, or instrumentation work.
+
+Allowed categories:
+
+- `natural-science` — physics modeling, analysis, simulation, and experiment;
+- `industrial-physical-systems` — instruments, controls, hardware, and
+  laboratory or facility systems;
+- `mathematics-or-formal-reasoning` — derivations, formal proofs, and
+  mathematical physics;
+- `software-engineering` — scientific software when implementation is the
+  primary operation.
 
 ### `subcategory`
 

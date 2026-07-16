@@ -1,16 +1,19 @@
 # Repository Scope
 
-FrontierPhysics reuses the native BenchFlow task-package, authoring, review,
-taxonomy, validation, and CI conventions developed in SkillsBench.
+FrontierPhysics keeps the complete, reviewable benchmark contract in one
+repository:
 
-The migration intentionally does not copy SkillsBench-specific publication and
-product surfaces that would misrepresent this benchmark:
+- native BenchFlow task packages;
+- scientific inputs and provenance records;
+- mentor skills used for solvability controls;
+- held-out oracle and verifier implementations;
+- contribution, review, and benchmark protocols;
+- reproducibility tooling and experiment instructions.
 
-- unrelated task and `tasks-extra` corpora;
-- the SkillsBench website, paper figures, launch posts, and historical research
-  datasets;
-- SkillsBench leaderboard fixtures and AgentBeats deployment package;
-- generated experiment dashboards and results.
+Generated jobs, trajectories, credentials, provider caches, and local
+environments stay untracked. Website, paper, leaderboard, and release assets
+belong here only when they describe FrontierPhysics itself.
 
-This keeps the reusable benchmark infrastructure while ensuring the public
-repository tells the FrontierPhysics story.
+Every committed artifact should help authors create physics tasks, help
+reviewers establish scientific validity, or help evaluators reproduce a
+reported result.

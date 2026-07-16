@@ -57,8 +57,8 @@ verifier interference.
 
 ## Mentor-skill control
 
-Every task includes one or more mentor skills. Generalizability is not a
-requirement. The skill may be tailored to the task and may include:
+Every task includes one or more mentor skills. The skill may be tailored to the
+task and may include:
 
 - an ordered research recipe;
 - detailed domain references;

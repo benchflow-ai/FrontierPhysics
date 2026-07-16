@@ -10,7 +10,8 @@ Review task validity separately from model capability.
 ## Workflow
 
 1. Fetch or identify the task without disturbing unrelated work.
-2. Read every task file and classify the track.
+2. Read every task file and classify it as computational, literature, or
+   artifact track.
 3. Run repository, structure, taxonomy, and skill checks.
 4. Audit prompt, environment, oracle, verifier, provenance, and mentor skills.
 5. Run the oracle.
@@ -37,10 +38,10 @@ Apply [references/policy-rubric.md](references/policy-rubric.md) and
 ## Structural checks
 
 ```bash
-python3 .github/scripts/validate_repository.py
-python3 .github/scripts/validate_tasks.py tasks
-python3 .github/scripts/lint_taxonomy.py
-python3 .github/scripts/lint_skill_frontmatter.py
+uv run python .github/scripts/validate_repository.py
+uv run python .github/scripts/validate_tasks.py tasks
+uv run python .github/scripts/lint_taxonomy.py
+uv run python .github/scripts/lint_skill_frontmatter.py
 bench tasks check tasks/<task-id>
 ```
 

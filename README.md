@@ -2,75 +2,94 @@
 
 [![Discord](https://img.shields.io/badge/Discord-Join-7289da?logo=discord&logoColor=white)](https://discord.gg/G9dg3EfSva)
 [![GitHub](https://img.shields.io/github/stars/benchflow-ai/FrontierPhysics?style=social)](https://github.com/benchflow-ai/FrontierPhysics)
+[![WeChat](https://img.shields.io/badge/WeChat-Join-07C160?logo=wechat&logoColor=white)](docs/wechat-qr.jpg)
 
-FrontierPhysics is a public benchmark for evaluating AI agents on advanced
-physics research workflows. It uses native
-[BenchFlow](https://github.com/benchflow-ai/benchflow) task packages and keeps
-the benchmark, reference solution, verifier, and optional mentor skills
-reviewable in one repository.
+Benchmarking AI agents on advanced physics research.
 
-## Benchmark design
+**[Contributing](CONTRIBUTING.md)** · **[Benchmark Protocol](docs/benchmark-protocol.md)** · **[BenchFlow SDK](https://github.com/benchflow-ai/benchflow)** · **[Discord](https://discord.gg/G9dg3EfSva)**
 
-FrontierPhysics reports two conditions:
+## What is FrontierPhysics?
 
-- **Without skills — primary benchmark condition.** This pass rate measures
-  what an agent can solve from the task, environment, tools, and public
-  internet access alone.
-- **With skills — solvability control.** Every task ships reviewable mentor
-  guidance that may be task-specific and procedural. This condition checks
-  that a capable agent can complete the task when given a sound research
-  recipe, helping separate task defects from model capability limits.
+FrontierPhysics measures whether AI agents can complete authentic,
+specialist-level physics workflows: building physical models, deriving
+quantities, running numerical simulations, analyzing scientific data, and
+producing research artifacts.
 
-Mentor skills may include step-by-step guidance, references, scripts, and
-derived intermediate assets. They must not contain hardcoded final answers,
-verifier internals, or a bypass around the requested scientific work.
+The primary benchmark condition gives agents the task, environment, and tools
+without mentor skills. Each task also ships a reviewable mentor package as a
+solvability control. A strong with-skill result helps distinguish a genuine
+capability limit from a broken task, environment, oracle, or verifier.
 
-## Quick start
+**Goals:**
+
+- Build a rigorous public benchmark for advanced physics research
+- Measure independent agent capability through no-skill pass rate
+- Use mentor-guided control runs to validate task solvability
+- Preserve scientific provenance, trajectories, diagnostics, and artifacts
+- Cover theoretical, computational, experimental, and instrumentation work
+
+## Quick Start
 
 ```bash
 git clone https://github.com/benchflow-ai/FrontierPhysics.git
 cd FrontierPhysics
 
+# Install the BenchFlow CLI supported by this repository.
 uv tool install "benchflow>=0.6.2,<0.7"
+
+# Install repository tooling from the committed lockfile.
 uv sync --locked
 
+# Validate a native task.md package.
 bench tasks check tasks/surface-ion-trap-shuttling
+
+# Oracle must pass before agent runs.
 bench eval run \
   --tasks-dir tasks/surface-ion-trap-shuttling \
   --agent oracle \
   --sandbox docker
 ```
 
-Run an agent without skills:
+Runnable benchmark tasks live under `tasks/`. FrontierPhysics uses `uv.lock`
+for reproducible repository tooling while the `bench` CLI runs task validation
+and evaluations.
 
-```bash
-bench eval run \
-  --tasks-dir tasks/surface-ion-trap-shuttling \
-  --agent codex-acp \
-  --model <model> \
-  --skill-mode no-skill \
-  --sandbox docker
+See [experiments/README.md](experiments/README.md) for paired no-skill and
+with-skill commands.
+
+### API Keys
+
+Running hosted agents may require provider credentials or an authenticated
+local agent session. Export only the credentials required by the selected
+agent. Keep secrets in an ignored `.env` or `.envrc`; never commit them.
+
+### Creating Tasks
+
+FrontierPhysics tasks are native BenchFlow `task.md` packages:
+
+```text
+tasks/<task-id>/
+  task.md
+  environment/
+    Dockerfile
+    skills/
+  oracle/
+    solve.sh
+  verifier/
+    test.sh
+    test_outputs.py
 ```
 
-Run the same agent with the task's mentor skills:
+See [CONTRIBUTING.md](CONTRIBUTING.md) for scientific-quality requirements,
+mentor-skill policy, metadata, validation, and review evidence.
 
-```bash
-bench eval run \
-  --tasks-dir tasks/surface-ion-trap-shuttling \
-  --agent codex-acp \
-  --model <model> \
-  --skill-mode with-skill \
-  --skills-dir tasks/surface-ion-trap-shuttling/environment/skills/ \
-  --sandbox docker
-```
+## Get Involved
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for task requirements and
-[MAINTAINER.md](MAINTAINER.md) for the review protocol. The imported
-infrastructure and intentional exclusions are documented in
-[docs/repository-scope.md](docs/repository-scope.md).
+- **Discord**: [Join our server](https://discord.gg/G9dg3EfSva)
+- **WeChat**: [Scan QR code](docs/wechat-qr.jpg)
+- **Weekly sync**: Mondays 5PM PT / 8PM ET / 9AM GMT+8
 
-## License and provenance
+## License
 
-Repository documentation and original code are licensed under
 [Apache 2.0](LICENSE). Bundled third-party components retain their own license
-files. See [NOTICE](NOTICE) and each task's provenance records.
+notices; see [NOTICE](NOTICE).

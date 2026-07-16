@@ -23,7 +23,7 @@ step-by-step, but may not hardcode final answers or expose verifier internals.
 uv tool install "benchflow>=0.6.2,<0.7"
 uv sync --locked
 
-python3 .github/scripts/validate_repository.py
+uv run python .github/scripts/validate_repository.py
 bench tasks check tasks/<task-id>
 bench eval run --tasks-dir tasks/<task-id> --agent oracle --sandbox docker
 
