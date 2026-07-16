@@ -28,10 +28,6 @@ tasks/<task-id>/
     └── test_outputs.py
 ```
 
-The public repository currently contains exactly one task,
-`surface-ion-trap-shuttling`. Do not copy another benchmark's task corpus into
-this repository.
-
 ## What FrontierPhysics measures
 
 Run and report both conditions:
