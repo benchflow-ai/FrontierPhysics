@@ -24,17 +24,6 @@ Mentor skills may include step-by-step guidance, references, scripts, and
 derived intermediate assets. They must not contain hardcoded final answers,
 verifier internals, or a bypass around the requested scientific work.
 
-## Current public task
-
-This repository intentionally contains exactly one task:
-
-- [`surface-ion-trap-shuttling`](tasks/surface-ion-trap-shuttling/) — derive
-  surface-trap secular frequencies with boundary-element electrostatics,
-  compute a nine-ion equilibrium chain, and generate inverse-engineered
-  shuttling waveforms.
-
-No other task corpus is mirrored into this repository.
-
 ## Quick start
 
 ```bash
