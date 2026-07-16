@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Enforce FrontierPhysics's current single-task public-repository contract."""
+"""Validate the FrontierPhysics public task layout."""
 
 from pathlib import Path
 
@@ -14,7 +14,7 @@ def main() -> int:
 
     if task_names != [EXPECTED_TASK]:
         problems.append(
-            f"tasks/ must contain only {EXPECTED_TASK!r}; found {task_names}"
+            f"tasks/ must match {[EXPECTED_TASK]!r}; found {task_names}"
         )
 
     for forbidden in ("example_tasks", "tasks-extra"):
@@ -29,7 +29,7 @@ def main() -> int:
     expected_file = tasks_root / EXPECTED_TASK / "task.md"
     if task_files != [expected_file]:
         problems.append(
-            "exactly one task.md is allowed at "
+            "task.md layout mismatch; expected "
             f"{expected_file.relative_to(ROOT)}; found "
             f"{[path.relative_to(ROOT).as_posix() for path in task_files]}"
         )
@@ -39,7 +39,7 @@ def main() -> int:
             print(f"ERROR: {problem}")
         return 1
 
-    print(f"OK: public repository contains exactly tasks/{EXPECTED_TASK}")
+    print("OK: public task layout matches repository policy")
     return 0
 
 

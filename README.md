@@ -1,5 +1,6 @@
 # FrontierPhysics
 
+[![Discord](https://img.shields.io/badge/Discord-Join-7289da?logo=discord&logoColor=white)](https://discord.gg/G9dg3EfSva)
 [![GitHub](https://img.shields.io/github/stars/benchflow-ai/FrontierPhysics?style=social)](https://github.com/benchflow-ai/FrontierPhysics)
 
 FrontierPhysics is a public benchmark for evaluating AI agents on advanced

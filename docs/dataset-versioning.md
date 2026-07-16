@@ -18,6 +18,5 @@ BenchFlow harness.
 - Major: task roster changes.
 - Minor: task-content fixes with the same roster.
 
-The current public roster contains one task. A future release manifest should
-pin the Git commit and a deterministic digest over every regular file in the
-task directory.
+A future release manifest should pin the Git commit and a deterministic digest
+over every regular file in each task directory.

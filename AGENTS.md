@@ -36,8 +36,6 @@ tasks/<task-id>/
 
 ## Rules
 
-- The public repository currently contains only
-  `tasks/surface-ion-trap-shuttling`.
 - Do not import any unrelated task from another benchmark.
 - `task.md` prompt bodies and oracle logic must be human-authored.
 - Prompts describe outcomes and must not mention skill names.

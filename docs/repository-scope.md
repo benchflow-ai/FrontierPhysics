@@ -13,5 +13,4 @@ product surfaces that would misrepresent this benchmark:
 - generated experiment dashboards and results.
 
 This keeps the reusable benchmark infrastructure while ensuring the public
-repository tells only the FrontierPhysics story and contains exactly one
-runnable task.
+repository tells the FrontierPhysics story.
