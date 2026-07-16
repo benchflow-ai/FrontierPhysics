@@ -34,8 +34,8 @@ capability limit from a broken task, environment, oracle, or verifier.
 git clone https://github.com/benchflow-ai/FrontierPhysics.git
 cd FrontierPhysics
 
-# Install the BenchFlow CLI supported by this repository.
-uv tool install "benchflow>=0.6.2,<0.7"
+# Install or upgrade to the latest stable BenchFlow CLI.
+uv tool install --upgrade benchflow
 
 # Install repository tooling from the committed lockfile.
 uv sync --locked
