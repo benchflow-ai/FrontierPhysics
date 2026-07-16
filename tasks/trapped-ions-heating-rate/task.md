@@ -3,31 +3,25 @@ schema_version: '1.3'
 metadata:
   author_name: Bingran You
   author_email: bingran.you@berkeley.edu
-  difficulty: hard
-  category: natural-science
-  subcategory: ion-trap-shuttling
+  difficulty: medium
+  category: atomic-molecular-and-optical-physics
+  subcategory: trapped-ions
   category_confidence: high
   task_type:
-  - simulation
-  - calculation
-  - generation
+  - data-processing
+  - experiment
   modality:
-  - 3d-model
   - scientific-data
-  - csv
+  - h5
   interface:
   - terminal
   - python
-  - simulation-tool
   skill_type:
-  - domain-procedure
-  - mathematical-method
-  - library-api-usage
+  - -
   tags:
-  - physics
+  - atomic-molecular-and-optical-physics
   - trapped-ions
-  - trap-simulation
-  - shuttling-simulation
+  - data-analysis
 verifier:
   type: test-script
   timeout_sec: 900.0
