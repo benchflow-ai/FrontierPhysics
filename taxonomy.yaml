@@ -1,0 +1,88 @@
+# FrontierPhysics task taxonomy — controlled vocabulary.
+# See taxonomy.md for definitions, decision rules, and codebook entries.
+# .github/scripts/lint_taxonomy.py validates task.md metadata against this file.
+
+categories:
+  - software-engineering
+  - cybersecurity
+  - natural-science
+  - finance-economics
+  - office-white-collar
+  - media-content-production
+  - industrial-physical-systems
+  - mathematics-or-formal-reasoning
+
+task_types:
+  - analysis
+  - calculation
+  - classification
+  - detection
+  - debugging
+  - implementation
+  - optimization
+  - repair
+  - transformation
+  - extraction
+  - generation
+  - simulation
+  - planning
+  - verification
+  - search
+  - ranking
+  - formatting
+
+modalities:
+  - source-code
+  - binary
+  - csv
+  - spreadsheet
+  - pdf
+  - document
+  - presentation
+  - image
+  - video
+  - audio
+  - network-logs
+  - database
+  - json
+  - xml
+  - geospatial-data
+  - scientific-data
+  - 3d-model
+  - time-series
+  - webpage
+
+interfaces:
+  - terminal
+  - python
+  - r
+  - spreadsheet-app
+  - office-suite
+  - browser
+  - gui-desktop
+  - database
+  - compiler-toolchain
+  - simulation-tool
+  - formal-prover
+
+skill_types:
+  - domain-procedure
+  - tool-workflow
+  - library-api-usage
+  - file-format-knowledge
+  - mathematical-method
+  - debugging-heuristic
+  - evaluation-protocol
+  - data-cleaning-procedure
+
+# Human-estimated difficulty. Empirical model difficulty is measured from
+# no-skill pass rate and is not stored in this field.
+difficulties:
+  - easy
+  - medium
+  - hard
+
+category_confidences:
+  - high
+  - medium
+  - low
