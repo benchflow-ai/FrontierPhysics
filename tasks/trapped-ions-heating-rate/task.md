@@ -8,8 +8,8 @@ metadata:
   subcategory: trapped-ions
   category_confidence: high
   task_type:
-  - data-processing
   - experiment
+  - data-processing
   modality:
   - scientific-data
   - h5
@@ -19,6 +19,7 @@ metadata:
   skill_type:
   - -
   tags:
+  - experiment
   - atomic-molecular-and-optical-physics
   - trapped-ions
   - data-analysis
@@ -42,3 +43,4 @@ environment:
   gpus: 0
 ---
 
+In the experiment we shot 729 nm beam to drive the transition from S to D state of 40Ca+ ions chain (9 ions chain in a linear paul trap) and 
