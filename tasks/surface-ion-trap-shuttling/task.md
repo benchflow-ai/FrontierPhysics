@@ -8,12 +8,12 @@ metadata:
   subcategory: trapped-ions
   category_confidence: high
   task_type:
+  - experiment
   - simulation
-  - calculation
-  - generation
+  - optimization
   modality:
-  - 3d-model
   - scientific-data
+  - 3d-model
   - csv
   interface:
   - terminal
@@ -24,6 +24,7 @@ metadata:
   - mathematical-method
   - library-api-usage
   tags:
+  - experiment
   - atomic-molecular-and-optical-physics
   - trapped-ions
   - trap-simulation
