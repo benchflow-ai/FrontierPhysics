@@ -30,6 +30,11 @@ README_HEADINGS = (
 )
 DISCORD = "https://discord.gg/G9dg3EfSva"
 WECHAT = "docs/wechat-qr.jpg"
+BENCHFLOW_INSTALL = "uv tool install --upgrade benchflow"
+PINNED_BENCHFLOW_INSTALL = re.compile(
+    r"uv\s+tool\s+install\s+[\"']?benchflow(?:[<>=!~].*)?[\"']?",
+    re.IGNORECASE,
+)
 
 
 def documentation_files() -> list[Path]:
@@ -64,6 +69,17 @@ def main() -> int:
         problems.append("README.md is missing the shared Discord invite")
     if WECHAT not in readme or not (ROOT / WECHAT).is_file():
         problems.append("README.md is missing the shared WeChat badge or QR image")
+    if BENCHFLOW_INSTALL not in readme:
+        problems.append("README.md must install the latest stable BenchFlow CLI")
+
+    for path in documentation_files():
+        text = path.read_text(encoding="utf-8")
+        for match in PINNED_BENCHFLOW_INSTALL.finditer(text):
+            if match.group(0).strip() != BENCHFLOW_INSTALL:
+                problems.append(
+                    f"{path.relative_to(ROOT)} uses a constrained or stale "
+                    "BenchFlow install command"
+                )
 
     if problems:
         for problem in problems:

@@ -20,7 +20,7 @@ step-by-step, but may not hardcode final answers or expose verifier internals.
 ## Workflow
 
 ```bash
-uv tool install "benchflow>=0.6.2,<0.7"
+uv tool install --upgrade benchflow
 uv sync --locked
 
 uv run python .github/scripts/validate_repository.py
