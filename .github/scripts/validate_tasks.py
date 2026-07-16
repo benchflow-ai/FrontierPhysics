@@ -6,7 +6,7 @@ FrontierPhysics stores each task as a native BenchFlow task.md package:
 directories. Split-layout files are rejected so the default corpus cannot
 quietly drift back to the old format.
 
-Run locally with `python3 .github/scripts/validate_tasks.py tasks`
+Run locally with `uv run python .github/scripts/validate_tasks.py tasks`
 and in CI as the merge-queue gate (which installs PyYAML first). Exits
 non-zero if any structural problem is found.
 """

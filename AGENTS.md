@@ -13,10 +13,11 @@ bench tasks check tasks/surface-ion-trap-shuttling
 bench eval run --tasks-dir tasks/surface-ion-trap-shuttling --agent oracle --sandbox docker
 bench eval run --tasks-dir tasks/surface-ion-trap-shuttling --agent codex-acp --model <model> --skill-mode no-skill --sandbox docker
 bench eval run --tasks-dir tasks/surface-ion-trap-shuttling --agent codex-acp --model <model> --skill-mode with-skill --skills-dir tasks/surface-ion-trap-shuttling/environment/skills/ --sandbox docker
-python3 .github/scripts/validate_repository.py
-python3 .github/scripts/validate_tasks.py tasks
-python3 .github/scripts/lint_taxonomy.py
-python3 .github/scripts/lint_skill_frontmatter.py
+uv run python .github/scripts/validate_repository.py
+uv run python .github/scripts/validate_tasks.py tasks
+uv run python .github/scripts/lint_taxonomy.py
+uv run python .github/scripts/lint_skill_frontmatter.py
+uv run python .github/scripts/lint_frontierphysics_docs.py
 ```
 
 ## Task layout
@@ -36,13 +37,13 @@ tasks/<task-id>/
 
 ## Rules
 
-- Do not import any unrelated task from another benchmark.
+- Tasks must represent authentic advanced-physics work and preserve source
+  provenance.
 - `task.md` prompt bodies and oracle logic must be human-authored.
 - Prompts describe outcomes and must not mention skill names.
 - Verifiers check scientific outcomes, not which tools or skills were used.
 - Every submitted task includes one or more mentor skills.
-- Mentor skills may be task-specific, prescriptive recipes. Generalizability is
-  not required.
+- Mentor skills may be task-specific, prescriptive recipes.
 - Mentor skills may bundle scripts, references, and derived intermediate
   assets, but must not hardcode final answers, expose verifier assertions, or
   bypass the requested scientific computation.

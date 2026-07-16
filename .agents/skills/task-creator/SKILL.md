@@ -67,8 +67,13 @@ tasks/<task-id>/
 - Keep grading offline.
 
 Read [references/test-design.md](references/test-design.md) and the relevant
-task-type reference, especially
-[references/tasktype-scientific.md](references/tasktype-scientific.md).
+task-family guide:
+
+- [computational and numerical physics](references/tasktype-scientific.md);
+- [scientific software](references/tasktype-code.md);
+- [experimental systems, controls, and HPC](references/tasktype-infrastructure.md);
+- [literature-grounded research](references/tasktype-research.md);
+- [scientific artifacts and multimodal outputs](references/tasktype-multimodal.md).
 
 ## Oracle
 
@@ -104,10 +109,10 @@ helpers in `scripts/`, and non-text resources in `assets/`.
 ## Validation
 
 ```bash
-python3 .github/scripts/validate_repository.py
-python3 .github/scripts/validate_tasks.py tasks
-python3 .github/scripts/lint_taxonomy.py
-python3 .github/scripts/lint_skill_frontmatter.py
+uv run python .github/scripts/validate_repository.py
+uv run python .github/scripts/validate_tasks.py tasks
+uv run python .github/scripts/lint_taxonomy.py
+uv run python .github/scripts/lint_skill_frontmatter.py
 bench tasks check tasks/<task-id>
 bench eval run \
   --tasks-dir tasks/<task-id> \

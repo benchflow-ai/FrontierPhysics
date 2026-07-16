@@ -80,9 +80,9 @@ Executable code (Python/Bash/etc.) that can be run directly to perform specific 
 Documentation and reference material intended to be loaded into context to inform Claude's process and thinking.
 
 **Examples from other skills:**
-- Product management: `communication.md`, `context_building.md` - detailed workflow guides
-- BigQuery: API reference documentation and query examples
-- Finance: Schema documentation, company policies
+- Electrostatics: equations, unit conventions, and solver diagnostics
+- Spectroscopy: calibration, fitting, and uncertainty guidance
+- Instrument control: API reference and safety limits
 
 **Appropriate for:** In-depth documentation, API references, database schemas, comprehensive guides, or any detailed information that Claude should reference while working.
 
@@ -90,9 +90,9 @@ Documentation and reference material intended to be loaded into context to infor
 Files not intended to be loaded into context, but rather used within the output Claude produces.
 
 **Examples from other skills:**
-- Brand styling: PowerPoint template files (.pptx), logo files
-- Frontend builder: HTML/React boilerplate project directories
-- Typography: Font files (.ttf, .woff2)
+- Derived geometry: panel meshes or basis data
+- Calibration: frozen JSON/CSV calibration files
+- Scientific figures: plotting styles, colormaps, and annotation templates
 
 **Appropriate for:** Templates, boilerplate code, document templates, images, icons, fonts, or any files meant to be copied or used in the final output.
 
@@ -167,19 +167,17 @@ Asset files are NOT intended to be loaded into context, but rather used within
 the output Claude produces.
 
 Example asset files from other skills:
-- Brand guidelines: logo.png, slides_template.pptx
-- Frontend builder: hello-world/ directory with HTML/React boilerplate
-- Typography: custom-font.ttf, font-family.woff2
-- Data: sample_data.csv, test_dataset.json
+- Geometry: panel_mesh.npz, detector_layout.stl
+- Calibration: calibration.json, response_curve.csv
+- Figure style: paper.mplstyle, colormap.json
+- Data: sample_spectrum.csv, initial_conditions.json
 
 ## Common Asset Types
 
-- Templates: .pptx, .docx, boilerplate directories
+- Scientific templates: plotting styles, configuration files, starter scripts
 - Images: .png, .jpg, .svg, .gif
-- Fonts: .ttf, .otf, .woff, .woff2
 - Boilerplate code: Project directories, starter files
-- Icons: .ico, .svg
-- Data files: .csv, .json, .xml, .yaml
+- Geometry and data: .stl, .npz, .csv, .json, .h5, .fits, .yaml
 
 Note: This is a text placeholder. Actual assets can be any file type.
 """

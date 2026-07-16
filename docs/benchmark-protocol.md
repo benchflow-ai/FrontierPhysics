@@ -2,7 +2,7 @@
 
 ## Conditions
 
-| Condition | Purpose | Leaderboard role |
+| Condition | Purpose | Reporting role |
 |---|---|---|
 | Oracle | Reference implementation and verifier control | Not ranked |
 | No skill | Independent agent capability | Primary score |

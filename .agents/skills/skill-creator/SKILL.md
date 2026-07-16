@@ -84,7 +84,7 @@ Executable code (Python/Bash/etc.) for tasks that require deterministic reliabil
 Documentation and reference material intended to be loaded as needed into context to inform Codex's process and thinking.
 
 - **When to include**: For documentation that Codex should reference while working
-- **Examples**: `references/finance.md` for financial schemas, `references/mnda.md` for company NDA template, `references/policies.md` for company policies, `references/api_docs.md` for API specifications
+- **Examples**: `references/electrostatics.md` for equations and conventions, `references/spectroscopy.md` for analysis methods, `references/instrument-api.md` for control interfaces
 - **Use cases**: Database schemas, API documentation, domain knowledge, company policies, detailed workflow guides
 - **Benefits**: Keeps SKILL.md lean, loaded only when Codex determines it's needed
 - **Best practice**: If files are large (>10k words), include grep search patterns in SKILL.md
@@ -95,7 +95,7 @@ Documentation and reference material intended to be loaded as needed into contex
 Files not intended to be loaded into context, but rather used within the output Codex produces.
 
 - **When to include**: When the skill needs files that will be used in the final output
-- **Examples**: `assets/logo.png` for brand assets, `assets/slides.pptx` for PowerPoint templates, `assets/frontend-template/` for HTML/React boilerplate, `assets/font.ttf` for typography
+- **Examples**: `assets/panel_mesh.npz` for derived geometry, `assets/calibration.json` for a frozen calibration, `assets/plot-style.mplstyle` for scientific figures
 - **Use cases**: Templates, images, icons, boilerplate code, fonts, sample documents that get copied or modified
 - **Benefits**: Separates output resources from documentation, enables Codex to use files without loading them into context
 
@@ -152,13 +152,13 @@ For Skills with multiple domains, organize content by domain to avoid loading ir
 bigquery-skill/
 ├── SKILL.md (overview and navigation)
 └── reference/
-    ├── finance.md (revenue, billing metrics)
-    ├── sales.md (opportunities, pipeline)
-    ├── product.md (API usage, features)
-    └── marketing.md (campaigns, attribution)
+    ├── theory.md (equations and approximations)
+    ├── simulation.md (solver setup and convergence)
+    ├── experiment.md (calibration and data reduction)
+    └── instrumentation.md (control interfaces and safety limits)
 ```
 
-When a user asks about sales metrics, Codex only reads sales.md.
+When a task concerns experimental calibration, Codex only reads experiment.md.
 
 Similarly, for skills supporting multiple frameworks or variants, organize by variant:
 

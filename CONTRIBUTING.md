@@ -47,8 +47,8 @@ agents still cannot solve it with an accurate mentor skill.
 Every submission must include at least one skill under
 `environment/skills/`.
 
-FrontierPhysics does not require skills to generalize beyond the submitted
-task. A skill may act like a senior researcher mentoring a student or intern:
+Mentor skills may be written specifically for the submitted task. A skill may
+act like a senior researcher mentoring a student or intern:
 
 - give an ordered research recipe;
 - explain non-obvious equations, units, conventions, and diagnostics;
