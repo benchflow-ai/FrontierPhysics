@@ -50,7 +50,7 @@ In the experiment we shot 729 nm beam to drive the transition from S to D state 
 
 For the COM-mode carrier model, use the measured axial secular frequency of 0.177 MHz.
 
-For the gaussian-beam along axial direction, the intensity distribution is modelled by this array [0.96912696, 0.9844114, 0.99344862, 0.99840835, 1., 0.99840835, 0.99344862, 0.9844114, 0.96912696]. Given the rabi flop experimental data in the env (florescence collected from 9 ions in total):
+For the gaussian-beam along axial direction, the intensity distribution is modelled by this array [0.96912696, 0.9844114, 0.99344862, 0.99840835, 1., 0.99840835, 0.99344862, 0.9844114, 0.96912696]. In the carrier model, use these nine calibrated values directly as multiplicative Rabi-frequency factors when averaging the nine ions. Given the rabi flop experimental data in the env (florescence collected from 9 ions in total):
 
 ```
 /root/data/delay_0us.h5
@@ -59,9 +59,9 @@ For the gaussian-beam along axial direction, the intensity distribution is model
 /root/data/delay_1000us.h5
 ```
 
-I want to calculate the heating rate in this trap for the ion chain for COM motional mode. In the unit of quanta/s. During fitting you should consider uncertainties.
+I want to calculate the heating rate in this trap for the ion chain for COM motional mode. In the unit of quanta/s. During each nonlinear Rabi-flop fitting you should consider uncertainties from the fit covariance. Calculate the heating rate using an ordinary unweighted linear fit of the four fitted central quanta values against delay time.
 
-In the end write a `result.md` as below (with 5 raw numbers):
+In the end write `/root/result.md` as below (with 5 raw numbers):
 
 ```md
 number_of_quanta_at_0us
